@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TypesAilesController extends Controller
+class TypeAilesController extends Controller
 {
     //
 }

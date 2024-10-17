@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forme_Corps extends Model
 {
+    protected $fillable = ['id','corps_forme'];
+    public $timestamps = false;
     use HasFactory;
 }

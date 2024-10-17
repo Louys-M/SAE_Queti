@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nbr_Cerques extends Model
 {
+    protected $fillable = ['id','cerque_nbr'];
+    public $timestamps = false;
     use HasFactory;
 }

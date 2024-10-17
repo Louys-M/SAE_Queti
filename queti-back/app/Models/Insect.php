@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Insect extends Model
 {
+    protected $fillable = ['id','nom_sc','nom_fr','photo','description'];
+    public $timestamps = false;
     use HasFactory;
 }

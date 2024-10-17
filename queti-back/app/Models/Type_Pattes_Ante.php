@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type_Pattes_Ante extends Model
 {
+    protected $fillable = ['id','patte_ante_type'];
+    public $timestamps = false;
     use HasFactory;
 }
