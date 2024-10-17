@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('type_ailes', function (Blueprint $table) {
+        Schema::create('favoris', function (Blueprint $table) {
             $table->id();
-            $table->string('aile_type');
+            $table->unsignedBigInteger('insect_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('insect_id')->references('id')->on('insects')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('type_ailes');
+        Schema::dropIfExists('favoris');
     }
 };

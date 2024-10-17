@@ -11,10 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('type_ailes', function (Blueprint $table) {
+        Schema::create('insects', function (Blueprint $table) {
             $table->id();
-            $table->string('aile_type');
+            $table->string('nom_sc');
+            $table->string('nom_fr');
+            $table->string('photo');
+            $table->string('description');
+            $table->unsignedBigInteger('ordre_id');
             $table->timestamps();
+
+            $table->foreign('ordre_id')->references('id')->on('ordres')->onDelete('cascade');
         });
     }
 
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('type_ailes');
+        Schema::dropIfExists('insects');
     }
 };

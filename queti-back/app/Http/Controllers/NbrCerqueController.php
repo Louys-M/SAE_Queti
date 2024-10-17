@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FormeCorpsController extends Controller
+class NbrCerqueController extends Controller
 {
     //
 }
