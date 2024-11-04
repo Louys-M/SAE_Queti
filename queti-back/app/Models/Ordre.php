@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ordre extends Model
 {
-    protected $fillable = ['id','nom_ordre','photo','description_1','description_2'];
+    protected $fillable = ['id','nom_ordre'];
     public $timestamps = false;
     use HasFactory;
 }
+
