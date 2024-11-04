@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('nom_fr');
             $table->string('photo');
             $table->string('description');
-            $table->unsignedBigInteger('ordre_id');
+            $table->unsignedBigInteger('famille_id');
             $table->timestamps();
 
-            $table->foreign('ordre_id')->references('id')->on('ordres')->onDelete('cascade');
+            $table->foreign('ordre_id')->references('id')->on('familles')->onDelete('cascade');
         });
     }
 
