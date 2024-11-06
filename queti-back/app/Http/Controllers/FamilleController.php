@@ -11,7 +11,6 @@ class FamilleController extends Controller
         $familles = Famille::where('nom_famille', '!=', '');
 
         $familles = $familles->get();
-
         // recherche tous les Product de la table products
         return response()->json([
             'status' => true,
