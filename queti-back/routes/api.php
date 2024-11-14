@@ -10,7 +10,7 @@ use App\Http\Controllers\AuthController;
 Route::get('/familles',[FamilleController::class,'index']);
 Route::get('/ordres',[OrdreController::class,'index']);
 Route::get('/insects',[InsectController::class,'index']);
-Route::get('/insects',[InsectController::class,'index']);
+Route::get('/insectsfam',[InsectController::class,'parFamille']);
 
 Route::post('register',[AuthController::class,'register']);
 Route::post('login',[AuthController::class,'login']);

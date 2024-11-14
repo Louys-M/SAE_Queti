@@ -10,4 +10,7 @@ class Famille extends Model
     protected $fillable = ['id','nom_famille','photo','description_1','description_2'];
     public $timestamps = false;
     use HasFactory;
+    public function insectes(){
+        return $this->hasMany(Insect::class);
+    }
 }

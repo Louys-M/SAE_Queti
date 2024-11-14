@@ -19,11 +19,11 @@ class InsectController extends Controller
         ], 200); // code 200, tout va bien
     }
 
-    public function famille (Request $request){
+    public function parFamille (Request $request){
         $insects = Insect::where('nom_sc', '!=', '');
 
-        if(isset($insects->id) && $request->id != ''){
-            $insects = $insects->where('famille_id',$request->id);
+        if(isset($insects->famille_id) && $request->famille_id != ''){
+            $insects = $insects->where('famille_id',$request->famille_id);
         }
 
         $insects = $insects->get();
