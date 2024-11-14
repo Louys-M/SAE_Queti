@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Favori extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'insect_id']; 
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function video()
+    {
+        return $this->belongsTo(Video::class);
+    }
+
+    public $timestamps = false;
 }
