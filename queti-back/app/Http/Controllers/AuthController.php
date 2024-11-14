@@ -190,53 +190,6 @@ class AuthController extends Controller
     //     }
     // }
 
-    // public function updatenote(Request $request)
-    // {
-    //     try
-    //     {
-    //         $validateDel = Validator::make($request->all(),
-    //         [
-    //             'video' => 'required|integer',
-    //             'upvote' => 'required|boolean',
-    //             'note' => 'required|integer',
-    //         ]);
-
-    //         if ($validateDel->fails()){
-    //             return response()->json([
-    //                 'status' => false,
-    //                 'message' => 'Validation Error',
-    //                 'data' => $validator->errors()
-    //             ],422);
-    //         }
-
-    //         // Retrieve the specific Favori model instance
-    //         $favori = Favori::where('videos_id', $request->video)->first();
-
-    //         if (!$favori) {
-    //             return response()->json([
-    //                 'status' => false,
-    //                 'message' => 'Favori not found',
-    //             ], 404);
-    //         }
-
-    //         $favori->upvote = $request->upvote;
-    //         $favori->note = $request->note;
-
-    //         $favori->save();
-
-    //         return response()->json([
-    //             'status '=> true,
-    //             'message' => 'note et like update',
-    //             ],200);
-    //             }
-    //             catch(\Throwable $th){
-    //             return response()->json([
-    //             'status '=> false,
-    //             'message' => $th->getMessage(),
-    //         ],500); //renvoie une erreur 500 si
-    //     }
-    // }
-
     // public function showfav(Request $request)
     // {
     //     $favori = Favori::where('users_id', '=', auth()->user()->id);
