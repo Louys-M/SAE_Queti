@@ -82,7 +82,7 @@ Tips : Remplacer *Z* avec un chiffre entre 1 et 44 !
 http://quetiback.sc2zeep6040.universe.wf/api/ordres
 ```
 
-#### Méthode GET, affiche les descriptions des familles dans un même ordre
+#### Méthode GET, affiche les familles d'un même ordre
 ```
 http://quetiback.sc2zeep6040.universe.wf/api/infos?ordre_id=Y
 ```
