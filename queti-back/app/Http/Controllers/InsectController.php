@@ -47,6 +47,47 @@ class InsectController extends Controller
         }
     }
 
+    public function unlike(Request $request)
+{
+    try {
+        // Validation rules
+        $validateUnlike = Validator::make($request->all(), [
+            'insect_id' => 'required',
+        ]);
+
+        // Handle validation error
+        if ($validateUnlike->fails()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Validation error',
+                'errors' => $validateUnlike->errors()
+            ], 401);
+        }
+
+        // Remove from favoris table
+        $deleted = Favori::where('user_id', auth()->user()->id)
+            ->where('insect_id', $request->insect_id)
+            ->delete();
+
+        if ($deleted) {
+            return response()->json([
+                'status' => true,
+                'message' => 'Removed from favoris successfully'
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => false,
+                'message' => 'Favorite not found'
+            ], 404);
+        }
+    } catch (\Throwable $th) {
+        return response()->json([
+            'status' => false,
+            'message' => $th->getMessage(),
+        ], 500);
+    }
+}
+
         public function index (Request $request){
             $insects = Insect::where('nom_sc', '!=', '');
             $insects = $insects->get();

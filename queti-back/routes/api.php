@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->post('logout',[AuthController::class,'logout'
 Route::middleware('auth:sanctum')->get('me',[AuthController::class,'me']);
 
 Route::middleware('auth:sanctum')->post('like',[InsectController::class,'like']);
+Route::middleware('auth:sanctum')->post('unlike',[InsectController::class,'unlike']);
 Route::middleware('auth:sanctum')->get('likedInsects',[InsectController::class,'likedInsects']);
 
 
