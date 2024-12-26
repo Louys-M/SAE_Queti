@@ -65,7 +65,7 @@ http://quetiback.sc2zeep6040.universe.wf/like?insect_id=2
 ### Méthode POST, l'utilisateur enlève un insecte de ses favoris
 
 ```
-http://quetiback.sc2zeep6040.universe.wf/
+http://quetiback.sc2zeep6040.universe.wf/unlike?insect_id=2
 ```
 
 ### Méthode GET, montre les insectes favoris de l'utilisateur
