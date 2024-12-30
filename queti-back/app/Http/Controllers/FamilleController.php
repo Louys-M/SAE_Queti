@@ -10,8 +10,16 @@ class FamilleController extends Controller
     public function index (Request $request){
         $familles = Famille::where('nom_famille', '!=', '');
 
+        $resultId = $request->query('resultId');
+    
+        if ($resultId) {
+            $familles = Famille::where('result_id', $resultId)->get();
+        } else {
+            $familles = Famille::all();
+        }
+
         $familles = $familles->get();
-        // recherche tous les Product de la table products
+
         return response()->json([
             'status' => true,
             'message' => 'Product List Successfully',
