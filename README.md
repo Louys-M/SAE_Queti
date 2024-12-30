@@ -65,7 +65,7 @@ http://quetiback.sc2zeep6040.universe.wf/like?insect_id=2
 ### Méthode POST, l'utilisateur enlève un insecte de ses favoris
 
 ```
-http://quetiback.sc2zeep6040.universe.wf/
+http://quetiback.sc2zeep6040.universe.wf/unlike?insect_id=2
 ```
 
 ### Méthode GET, montre les insectes favoris de l'utilisateur
@@ -80,6 +80,11 @@ Tips : Remplacer *Z* avec un chiffre entre 1 et 44 !
 ### Méthode GET, affiche la liste de tous les ordres
 ```
 http://quetiback.sc2zeep6040.universe.wf/api/ordres
+```
+
+#### Méthode GET, affiche les familles
+```
+http://quetiback.sc2zeep6040.universe.wf/api/familles
 ```
 
 #### Méthode GET, affiche les familles d'un même ordre
