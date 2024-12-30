@@ -8,21 +8,23 @@ use Illuminate\Http\Request;
 class FamilleController extends Controller
 {
     public function index (Request $request){
-        $familles = Famille::where('nom_famille', '!=', '');
-
+        // Retrieve 'resultId' from the query parameters
         $resultId = $request->query('resultId');
-    
+
+        // Build the query
+        $familles = Famille::query();
+
+        // If 'resultId' is provided, apply the filter
         if ($resultId) {
-            $familles = Famille::where('result_id', $resultId)->get();
-        } else {
-            $familles = Famille::all();
+            $familles->where('id', $resultId);
         }
+
 
         $familles = $familles->get();
 
         return response()->json([
             'status' => true,
-            'message' => 'Product List Successfully',
+            'message' => 'Famille List Successfully',
             'data' => $familles
         ], 200); // code 200, tout va bien
     }
